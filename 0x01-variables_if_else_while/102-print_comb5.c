@@ -10,32 +10,28 @@
 /* betty style doc for function main goes there */
 int main(void)
 {
-	int ch, ch2;
+	int i, p;
 
-	ch = 0;
-	while (ch < 100)
+	for (i = 0; i < 100; i++)
 	{
-		ch2 = ch++;
-		for (ch2 = 1 ; ch2 < 100; ch2++)
+		for (p = 0; p < 100; p++)
 		{
-		putchar((ch / 10) + '0');
-		putchar((ch % 10) + '0');
-		putchar(' ');
-		putchar((ch2 / 10) + '0');
-		putchar((ch2 % 10) + '0');
-		if (ch2 == 99)
-		{
-			break;
-		}
-		putchar(',');
-		putchar(' ');
-		}
-		ch++;
-		if (ch == 99)
-		{
-			break;
+			if (p > i)
+			{
+				putchar((i / 10) + '0');
+				putchar((i % 10) + '0');
+				putchar(' ');
+				putchar((p / 10) + '0');
+				putchar((p % 10) + '0');
+				
+				if (i != 98)
+				{
+					putchar(',');
+					putchar(' ');
+				}
+			}
 		}
 	}
 	putchar('\n');
-	return (0);
+	return(0);
 }
